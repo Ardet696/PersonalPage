@@ -1,0 +1,106 @@
+\documentclass[11pt, a4paper]{article}
+
+% --- PDFLATEX COMPATIBLE PREAMBLE ---
+\usepackage[left=0.6in, top=0.35in, right=0.6in, bottom=0.35in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[spanish]{babel}
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+
+% Section formatting to mimic a resume style without external .cls files
+\titleformat{\section}{\large\bfseries\uppercase}{}{0em}{}[\titlerule]
+\titlespacing{\section}{0pt}{12pt}{8pt}
+
+\setlist[itemize]{label=-, leftmargin=1.5em, nosep}
+
+\begin{document}
+
+\begin{center}
+    {\huge \textbf{Victor Magnani}} \\
+    \vspace{4pt}
+    (+34) 681 13 80 48 \quad | \quad \href{mailto:victor.magnaniramos@gmail.com}{victor.magnaniramos@gmail.com} \\
+    \href{https://github.com/Ardet696}{github.com/Ardet696} \quad | \quad \href{https://linkedin.com/in/victormagnani}{linkedin.com/in/victormagnani}
+\end{center}
+
+\vspace{0.3em}
+\begin{center}
+    {\small Actualmente busco oportunidades de prácticas a tiempo parcial durante el año académico o prácticas de verano a tiempo completo. Con ganas de unirme a equipos motivados donde pueda contribuir y seguir creciendo.}
+\end{center}
+
+%----------------------------------------------------------------------------------------
+%   EDUCACIÓN
+%----------------------------------------------------------------------------------------
+\section{Educación}
+
+\textbf{La Salle BCN (Universitat Ramon Llull) -- Grado en Ingeniería Informática Internacional} \hfill Sep 2022 -- Jun 2027
+\begin{itemize}
+    \item Programa acreditado por ABET impartido íntegramente en inglés.
+    \item Software: POO, Bases de Datos Relacionales, UI/UX (Figma), Git, UML.
+    \item Núcleo de Ingeniería: Redes, Estructuras de Datos y Algoritmos, FPGA, sistemas de CPU de 8 bits, PIC18, ASM/C.
+    \item Matrícula de Honor en Ética (Pensamiento y Creatividad 2).
+\end{itemize}
+
+\vspace{0.8em}
+
+\textbf{Collegi Sagrat Cor -- Bachillerato Científico-Tecnológico} \hfill Sep 2020 -- Jun 2022
+\begin{itemize}
+    \item Fundamentos de matemáticas, física, economía e ingeniería.
+    \item Matrícula de Honor en el Trabajo de Investigación sobre gestión de activos y estrategias de trading para inversores minoristas.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%   EXPERIENCIA
+%----------------------------------------------------------------------------------------
+\section{Experiencia}
+
+\textbf{Samsung Galaxy -- Vendedor} \hfill Sep 2025
+\begin{itemize}
+    \item Demostración de las características de los productos a los clientes; desarrollo de habilidades de comunicación y atención al público.
+\end{itemize}
+
+\vspace{0.8em}
+
+\textbf{CaixaBank -- Front Desk, Asistente de Gestores} \hfill Ago 2025
+\begin{itemize}
+    \item Resolución de consultas de clientes sobre transacciones y banca digital.
+    \item Asistencia a gestores de activos senior con cumplimiento normativo KYC e investigación de fuentes de ingresos.
+\end{itemize}
+
+\vspace{0.8em}
+
+\textbf{Tutor de Matemáticas} \hfill 2022 -- 2023
+\begin{itemize}
+    \item Enseñanza de fundamentos de cálculo y álgebra utilizando diversos métodos para mejorar la retención de los estudiantes.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%   PROYECTOS PERSONALES
+%----------------------------------------------------------------------------------------
+\section{Proyectos Personales}
+
+\textbf{MP3 TUI: Reproductor de MP3 minimalista en C++ al estilo Winamp} \hfill Ene 2026 -- Presente
+\begin{itemize}
+    \item Diseño de un \texttt{RingBuffer} SPSC sin bloqueos para alimentar la callback de audio en tiempo real de SDL sin contención de mutex ni tirones.
+    \item Gestión de 5 hilos concurrentes (decodificación, audio, TUI, pre-carga, avance automático) con \texttt{std::jthread} de C++20; ciclo de vida seguro ante excepciones mediante RAII.
+    \item Construcción de la TUI con FTXUI; contribución de nuevas funcionalidades al repositorio principal de la biblioteca.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------
+%   ADICIONAL
+%----------------------------------------------------------------------------------------
+\section{Información Adicional}
+\begin{itemize}
+    \item \textbf{Idiomas:} Inglés [C1] | Nativo: Español, Catalán, Italiano | Aprendiendo Alemán [A1].
+    \item \textbf{Certificaciones:} CISCO Intro to Networks, Cambridge C1, SIT Study Tour 2024.
+    \item \textbf{Kaggle:} Python, Intro to ML, Pandas.
+    \item \textbf{Voluntariado:} Desarrollo de una web estática para una empresa de RRHH; colaborador en proyectos open-source (FTXUI, +10k estrellas); Miembro Afiliado de la Royal Aeronautical Society.
+\end{itemize}
+
+\vspace{0.4em}
+\begin{flushleft}
+{\small Busco activamente entornos donde se me desafíe, pueda aprender continuamente y contribuir de manera significativa. Estoy orientado al producto, pero también me apasionan los detalles técnicos de cómo funcionan los sistemas internamente. Últimamente he empezado a profundizar en mi comprensión de Linux, arquitectura de computadores y sistemas de baja latencia, temas que encuentro fascinantes y de gran importancia práctica.}
+\end{flushleft}
+
+\end{document}

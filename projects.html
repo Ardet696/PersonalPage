@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <link rel="stylesheet" type="text/css" href="projects.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Lexend+Deca:wght@100..900&display=swap" rel="stylesheet">
+    <title>Projects · Victor Magnani</title>
+  </head>
+  <body>
+    <div class="page">
+      <header class="site-header container">
+        <a href="index.html" class="brand">Victor Magnani</a>
+        <nav class="site-nav">
+          <a href="index.html">Home</a>
+          <a href="projects.html" class="active">Projects</a>
+          <a href="cv.html">CV</a>
+        </nav>
+      </header>
+
+      <main class="projects-main container">
+        <section class="project-card">
+          <article class="project-inner">
+            <header class="project-head">
+              <h1 class="project-name">TUI Music Player</h1>
+              <div class="project-stats">
+                <span class="stat">49 stars</span>
+              </div>
+            </header>
+
+            <figure class="project-media">
+              <video src="assets/TUIMusicPlayerVideo.mp4" poster="assets/MP3Player.png"
+                     autoplay muted loop playsinline
+                     aria-label="TUI Music Player running in the terminal"></video>
+            </figure>
+
+            <ul class="project-bullets">
+              <li><strong>Lock-free audio pipeline</strong> SPSC ring buffer feeds SDL's callback with zero mutex contention.</li>
+              <li><strong>Multithreaded C++20</strong> decode, UI, and auto-advance on independent jthreads.</li>
+              <li><strong>Real-time FFT visualizer</strong> live spectrum, oscilloscope, and circular modes in the terminal.</li>
+            </ul>
+
+            <details class="project-more">
+              <summary>Read more</summary>
+              <div class="project-more-panel">
+                <p>
+                  A minimalist MP3 player for the terminal, designed around great performance and low memory/CPU usage.<br></br>
+                  It runs on Linux and macOS (SDL2), ships pre-built binaries, and is available on the AUR. The player is organised around a music
+                  root where each subdirectory is treated as an album or playlist, with a small command terminal for play, themes, visuals and volume.
+                </p>
+                <p>
+                  <a href="https://github.com/ardet696/MinimalistMP3Player" target="_blank">
+                    View on GitHub
+                  </a>
+                </p>
+              </div>
+            </details>
+          </article>
+        </section>
+      </main>
+
+      <footer class="site-footer container">
+        © 2026 Victor Magnani ·
+        <a href="https://github.com/Ardet696/" target="_blank">GitHub</a> ·
+        <a href="https://www.linkedin.com/in/victormagnani/" target="_blank">LinkedIn</a>
+      </footer>
+    </div>
+
+    <script data-goatcounter="https://ardet696.goatcounter.com/count"
+            async src="//gc.zgo.at/count.js"></script>
+  </body>
+</html>

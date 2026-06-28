@@ -1,0 +1,198 @@
+/* ============================================================
+   Projects page — inherits palette + layout from styles.css.
+   Each .project-card is a single vertical stack (flex column):
+     1. title header   2. full-size video
+     3. full-width bullets   4. read more
+   Reusable: copy the .project-card section for each new project.
+   ============================================================ */
+
+:root {
+  /* enables smooth height animation for <details> (progressive) */
+  interpolate-size: allow-keywords;
+}
+
+.projects-main {
+  flex: 1 1 auto;
+}
+
+/* ---------- Card: 4-row, 1-column flex stack ---------- */
+.project-card {
+  padding: clamp(1.5rem, 5vh, 3rem) 0 clamp(2rem, 7vh, 4rem);
+}
+.project-inner {
+  display: flex;
+  flex-direction: column;
+  gap: clamp(1.75rem, 4vh, 3rem);
+}
+
+/* Row 1 — title header */
+.project-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px 24px;
+}
+.project-name {
+  margin: 0;
+  font-weight: 300;
+  font-size: clamp(1.9rem, 4.5vw, 2.9em);
+  line-height: 1.1;
+  letter-spacing: -0.5px;
+}
+.project-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+.stat {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8em;
+  letter-spacing: 0.5px;
+  color: var(--muted);
+  border: 1px solid var(--muted);
+  border-radius: 999px;
+  padding: 4px 14px;
+}
+
+/* Row 2 — full-size framed video */
+.project-media {
+  margin: 0;
+  background: var(--surface);
+  border-radius: var(--radius);
+  padding: clamp(0.85rem, 1.6vw, 1.4rem);
+  box-shadow: 0 20px 44px -24px rgba(0, 0, 0, 0.45);
+  transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+.project-media:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 28px 56px -24px rgba(0, 0, 0, 0.5);
+}
+.project-media img,
+.project-media video {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: calc(var(--radius) - 3px);
+}
+
+/* Row 3 — full-width bullets as a 3-up feature row */
+.project-bullets {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: clamp(1.25rem, 3vw, 2.5rem);
+}
+.project-bullets li {
+  padding-top: 16px;
+  border-top: 1px solid var(--muted);
+  color: var(--muted);
+  font-size: 0.95em;
+  line-height: 1.55;
+}
+.project-bullets li strong {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  font-size: 1.05em;
+  color: var(--ink);
+}
+.project-bullets code {
+  background: var(--surface);
+  padding: 1px 6px;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Row 4 — read more (native <details>, animated) */
+.project-more summary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  cursor: pointer;
+  list-style: none;
+  font-size: 0.95em;
+  color: var(--muted);
+  transition: color 0.25s ease;
+  user-select: none;
+}
+.project-more summary::-webkit-details-marker {
+  display: none;
+}
+.project-more summary::after {
+  content: "▾";
+  font-size: 0.85em;
+  transition: transform 0.3s ease;
+}
+.project-more[open] summary::after {
+  transform: rotate(180deg);
+}
+.project-more summary:hover {
+  color: var(--ink);
+}
+.project-more-panel {
+  margin-top: 16px;
+}
+.project-more-panel p {
+  margin: 0 0 1em;
+  font-size: 0.95em;
+  color: var(--muted);
+}
+.project-more-panel a {
+  color: var(--ink);
+  border-bottom: 1px solid var(--muted);
+  transition: border-color 0.25s ease;
+}
+.project-more-panel a:hover {
+  border-color: var(--ink);
+}
+/* Smooth open/close where supported; degrades to instant elsewhere. */
+.project-more::details-content {
+  opacity: 0;
+  block-size: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, block-size 0.3s ease, content-visibility 0.3s allow-discrete;
+}
+.project-more[open]::details-content {
+  opacity: 1;
+  block-size: auto;
+}
+
+/* ---------- Entrance animation (staggered) ---------- */
+@keyframes rise {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.project-inner > * {
+  animation: rise 0.6s ease both;
+}
+.project-inner > *:nth-child(2) {
+  animation-delay: 0.08s;
+}
+.project-inner > *:nth-child(3) {
+  animation-delay: 0.16s;
+}
+.project-inner > *:nth-child(4) {
+  animation-delay: 0.24s;
+}
+@media (prefers-reduced-motion: reduce) {
+  .project-inner > * {
+    animation: none;
+  }
+  .project-media,
+  .project-media:hover {
+    transform: none;
+  }
+}
