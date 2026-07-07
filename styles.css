@@ -72,7 +72,6 @@ a {
   opacity: 1;
 }
 
-/* ---------- Footer ---------- */
 .site-footer {
   padding-top: 32px;
   padding-bottom: 32px;
@@ -91,19 +90,19 @@ a {
   flex: 1 1 auto;
   display: flex;
   align-items: center;
-  gap: clamp(2rem, 5vw, 4rem);
-  padding-top: clamp(2rem, 8vh, 6rem);
-  padding-bottom: clamp(2rem, 8vh, 6rem);
+  gap: clamp(1.5rem, 5vw, 3.5rem);
+  padding-top: clamp(1.25rem, 6vh, 3.5rem);
+  padding-bottom: clamp(1.25rem, 6vh, 3.5rem);
 }
 .hero-content {
-  flex: 1 1 58%;
+  flex: 1 1 50%;
   display: flex;
   flex-direction: column;
-  gap: clamp(2rem, 6vw, 5rem);
+  gap: clamp(1.25rem, 4vh, 2.5rem);
 }
 .bonsai-wrap {
-  flex: 0 1 42%;
-  max-width: 440px;
+  flex: 1 1 50%;
+  max-width: 560px;
   align-self: center;
 }
 .bonsai {
@@ -128,11 +127,11 @@ a {
 }
 .hero-title {
   font-weight: 300;
-  font-size: clamp(2rem, 6vw, 3.6em);
-  line-height: 1.12;
+  font-size: clamp(1.8rem, 4.2vw, 3.2em);
+  line-height: 1.15;
   letter-spacing: -0.5px;
   margin: 0;
-  max-width: 16ch;
+  max-width: 22ch;
 }
 .hero-text {
   margin: 0;
@@ -142,7 +141,20 @@ a {
   color: var(--ink);
   text-align: justify;
 }
+.hero-description {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
 
+.hero-list {
+  margin: 0;
+  padding-left: 1.5rem;
+  max-width: 56ch;
+  font-size: clamp(0.85rem, 1.8vw, 0.95em);
+  line-height: 1.6;
+  color: var(--muted);
+}
 .page-main {
   flex: 1 1 auto;
 }
