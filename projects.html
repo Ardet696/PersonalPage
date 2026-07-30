@@ -25,7 +25,7 @@
         <section class="project-card">
           <article class="project-inner">
             <header class="project-head">
-              <h1 class="project-name">TUI Music Player</h1>
+              <h1 class="project-name"> <strong>Music Player</strong></h1>
               <div class="project-stats">
                 <span class="stat">50 stars</span>
               </div>
@@ -53,6 +53,45 @@
                 </p>
                 <p>
                   <a href="https://github.com/ardet696/MinimalistMP3Player" target="_blank">
+                    View on GitHub
+                  </a>
+                </p>
+              </div>
+            </details>
+          </article>
+        </section>
+
+        <section class="project-card">
+          <article class="project-inner">
+            <header class="project-head">
+              <h1 class="project-name"><strong>Caffeine Tracker</strong></h1>
+            </header>
+
+            <figure class="project-media">
+              <video src="assets/caffeineTui-Mvp.mp4" poster="assets/CaffeineTuiScreenshot.png"
+                     autoplay muted loop playsinline
+                     aria-label="caffeineTui running in the terminal"></video>
+            </figure>
+
+            <ul class="project-bullets">
+              <li><strong>Clean layered architecture</strong> presentation, business, and persistence layers are fully decoupled, each isolated behind its own interfaces.</li>
+              <li><strong>OOP design with dependency inversion</strong> services and repositories are programmed against interfaces, keeping the domain logic testable and independent of storage/UI details.</li>
+              <li><strong>C++20 terminal UI</strong> built with FTXUI, including a live dashboard, charts, and a CLI-style command input.</li>
+            </ul>
+
+            <details class="project-more">
+              <summary>Read more</summary>
+              <div class="project-more-panel">
+                <p>
+                  A terminal app for tracking daily caffeine intake. The dashboard shows how much caffeine is
+                  still in your system hour by hour, recommends the next best time to have another cup, and suggests
+                  a healthy daily dosage. A small CLI built into the TUI handles logging intake, setting up recurring
+                  routines ("every Monday at 7am, one espresso"), and managing settings.<br></br>
+                  Under the hood it's split into clean layers, presentation, business, and JSON persistence, wired
+                  together through interfaces rather than concrete classes, so each layer can be swapped or tested on its own.
+                </p>
+                <p>
+                  <a href="https://github.com/Ardet696/caffeineTui" target="_blank">
                     View on GitHub
                   </a>
                 </p>
