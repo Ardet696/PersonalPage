@@ -64,12 +64,13 @@
             <hr class="section-divider">
             <div class="cv-item">
               <h3 class="item-title">
-                AI Backend Intern at Macaque Consulting
+                AI Backend Intern at local startup
                 <span class="date-hidden">Internship ~ Aug 2026 - Present</span>
               </h3>
               <ul>
-                <li>Designed and built a RAG module from scratch for the company CMS: chunker, document extractors and task queues with no framework dependencies.</li>
-                <li>Exposed retrieval through multi-tenant HTTP endpoints backed by Postgres/pgvector, with Celery and Redis for asynchronous ingestion.</li>
+                <li>Designed and built a RAG module from scratch for the company CMS: chunker,extractors and ingestion queues with no RAG framework dependencies.</li>
+                <li>Engineered asynchronous ingestion on Celery and Redis with Azure OpenAI embeddings stored in Postgres/pgvector.</li>
+                <li>Cut event-loop blocking on RAG queries from 122 ms to 6 ms, taking four concurrent queries from 480 ms to 122 ms, locked in by performance regression tests.</li>
               </ul>
             </div>
             <div class="cv-item">
@@ -111,7 +112,7 @@
                 <span class="date-hidden">~ January 2026 - Present</span>
               </h3>
               <ul>
-                <p class="item-desc">Winamp style Terminal music player developed with C++, used by hundreds of CLI / Linux community users - 50 stars in GitHub</p>
+                <p class="item-desc">Terminal music player developed with C++, +1000 downloads from CLI / Linux community users - 50 stars in GitHub</p>
                 <li>Lock-free SPSC RingBuffer, feeding SDL's audio callback without mutex contention or audio glitches.</li>
                 <li>Multithreaded architecture using C++20 jthread.</li>
               </ul>
@@ -191,8 +192,8 @@
               I love the technical details of how systems work under the hood and applying my creativity to new projects.
             </p>
             <p>
-              Lately I have started deepening my understanding of <strong>linux, computer architecture and low-latency systems</strong>,
-              topics I find endlessly fascinating and practically important.
+              Lately I have started deepening my understanding of <strong>deep agents, RAG, knowledge graphs and knowledge bases</strong>,
+              exploring how LLMs can reason over structured knowledge to build reliable AI systems.
             </p>
           </section>
 
